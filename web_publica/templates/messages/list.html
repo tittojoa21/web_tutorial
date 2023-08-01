@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bandeja de entrada</title>
+</head>
+<body>
+    <h1>Bandeja de entrada</h1>
+    <ul>
+        {% for message in messages %}
+            <li>{{ message.sender }} - {{ message.subject }}</li>
+        {% empty %}
+            <li>No hay mensajes</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

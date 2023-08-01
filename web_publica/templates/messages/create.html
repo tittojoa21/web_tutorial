@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enviar mensaje</title>
+</head>
+<body>
+    <h1>Enviar mensaje</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="recipient">Destinatario:</label>
+        <input type="text" name="recipient" id="recipient" required>
+        <br>
+        <label for="subject">Asunto:</label>
+        <input type="text" name="subject" id="subject" required>
+        <br>
+        <label for="body">Mensaje:</label>
+        <textarea name="body" id="body" required></textarea>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
