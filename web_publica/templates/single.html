@@ -1,0 +1,209 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gymn Olimpo</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free Website Template" name="keywords">
+    <meta content="Free Website Template" name="description">
+
+    <!-- Favicon -->
+    <link href="{% static 'assets/img/favicon.ico' %}" rel="icon">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Flaticon Font -->
+    <link href="{% static 'assets/lib/flaticon/font/flaticon.css' %}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{%static 'assets/css/style.min.css'%}" rel="stylesheet">
+</head>
+
+<body class="bg-white">
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 nav-bar">
+        <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
+            <a href="" class="navbar-brand">
+                <h1 class="m-0 display-4 font-weight-bold text-uppercase text-white">Gimnasio Olimpo</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto p-4 bg-secondary">
+                    <a href="{% url 'home' %}" class="nav-item nav-link">Inicio</a>
+                    <a href="{% url 'about' %}" class="nav-item nav-link">Sobre Nosotros</a>
+                    <a href="{% url 'feature' %}" class="nav-item nav-link">Caracteristicas</a>
+                    <a href="{% url 'clases' %}" class="nav-item nav-link">Clases</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">Paginas</a>
+                        <div class="dropdown-menu text-capitalize">
+                            <a href="{% url 'blog' %}" class="dropdown-item">Grilla</a>
+                            <a href="single.html" class="dropdown-item">Detalles</a>
+                        </div>
+                    </div>
+                    <a href="{% url 'contact' %}" class="nav-item nav-link">Contactos</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header mb-5">
+        <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+            <h4 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase font-weight-bold">Detalles</h4>
+            <div class="d-inline-flex">
+                <p class="m-0 text-white"><a class="text-white" href="">Inicio</a></p>
+                <p class="m-0 text-white px-2">/</p>
+                <p class="m-0 text-white">Detalles</p>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Blog Detail Start -->
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-12">
+                <img class="img-fluid mb-4" src="{% static 'assets/img/carousel-1.jpg' %}" alt="Image">
+                <div class="d-flex align-items-center mb-4">
+                    <div class="d-flex flex-column align-items-center justify-content-center rounded-circle bg-primary text-white" style="width: 100px; height: 100px;">
+                        <span>30</span>
+                        <strong class="text-uppercase m-0 text-white">Diciembre</strong>
+                        <span>2023</span>
+                    </div>
+                    <div class="pl-3">
+                        <h1 class="font-weight-bold mb-3">Mantén la motivación: Consejos para superar la meseta en tu rutina de ejercicios</h1>
+                        <div class="d-flex">
+                            <span class="mr-2 text-muted"><i class="fa fa-user"></i>Cliente</span>
+                            <span class="mr-2 text-muted"><i class="fa fa-folder"></i>Motivación</span>
+                        </div>
+                    </div>
+                </div>
+                <p>A medida que te embarcas en tu viaje de acondicionamiento físico, es normal encontrarse con períodos de estancamiento o "mesetas" en tu progreso.
+                     En este artículo, te proporcionamos consejos prácticos para superar estos momentos y mantener la motivación para alcanzar tus objetivos.
+                      Desde la importancia de establecer metas realistas hasta la variedad en tus entrenamientos y la incorporación de ejercicios desafiantes
+                       descubrirás cómo salir de la rutina y seguir avanzando hacia el éxito en el gimnasio. Además, exploraremos la relevancia del descanso adecuado
+                        y la importancia de celebrar tus logros a lo largo del camino. ¡No te desanimes y descubre cómo mantener la determinación y el enfoque en tu viaje
+                        hacia un cuerpo más fuerte y saludable!</p>
+
+                <h2 class="mb-4 font-weight-bold">Consejos para una rutina de entrenamiento efectiva en el gimnasio</h2>
+                <img class="w-50 float-left mr-4 mb-3" src="{% static 'assets/img/blog-1.jpg' %}" alt="Image">
+                <p>Si estás buscando alcanzar tus metas de fitness y sacar el máximo provecho de tus entrenamientos en el gimnasio, es esencial tener una rutina efectiva.
+                     El primer paso es establecer tus objetivos claros, ya sea ganar fuerza, mejorar la resistencia, perder peso o aumentar la masa muscular. Luego, considera
+                      la variedad de ejercicios para trabajar diferentes grupos musculares y evitar el estancamiento. Incorpora ejercicios de fuerza, como levantamiento
+                       de pesas y ejercicios de peso corporal, así como actividades cardiovasculares, como correr, nadar o andar en bicicleta.
+                       
+                       Además, es fundamental dar tiempo suficiente para la recuperación muscular. Alterna los días de entrenamiento intenso con días de descanso activo o completo.
+                        Una nutrición adecuada también es crucial para el rendimiento y la recuperación. Asegúrate de incluir proteínas magras, carbohidratos complejos y grasas 
+                        saludables en tu dieta. Mantén un registro de tus entrenamientos y progreso para evaluar tus resultados y realizar ajustes si es necesario.
+                    
+                    Recuerda que la paciencia y la consistencia son clave. El progreso puede llevar tiempo, pero con una rutina adecuada y el compromiso de mantenerte enfocado
+                     alcanzarás tus metas de fitness y disfrutarás de los beneficios de una vida más activa y saludable.</p>
+
+                <h3 class="mb-4 font-weight-bold">Alimentación saludable para optimizar tus entrenamientos en el gimnasio</h3>
+                <img class="w-50 float-right ml-4 mb-3" src="{% static 'assets/img/blog-2.jpg' %}" alt="Image">
+                <p>Cuando se trata de obtener resultados óptimos en el gimnasio, la nutrición adecuada juega un papel fundamental. La comida que consumes proporciona la energía necesaria
+                     para tus entrenamientos y ayuda a la recuperación muscular después de esfuerzos intensos. Para optimizar tus entrenamientos, es esencial tener una dieta equilibrada y saludable.
+
+                    Comienza asegurándote de obtener suficientes proteínas para apoyar la reparación y el crecimiento muscular. Fuentes de proteínas magras como pollo, pavo, pescado, huevos y productos
+                     lácteos son excelentes opciones. Los carbohidratos complejos como arroz integral, batatas y avena son esenciales para proporcionar la energía necesaria durante tus sesiones
+                      de entrenamiento.
+                    
+                    No olvides incluir grasas saludables en tu dieta, como aguacates, nueces, aceite de oliva y pescado graso. 
+                    Estas grasas son esenciales para la salud del corazón y para el transporte de vitaminas liposolubles.
+                    
+                    La hidratación también es clave para un rendimiento óptimo. Bebe suficiente agua antes, durante y después de tus entrenamientos para evitar la deshidratación.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 pt-4">
+        <div class="media bg-secondary text-white mb-4 p-5">
+            <img src="{% static 'assets/img/user.jpg' %}" alt="Image" class="mr-3 mt-1 rounded-circle p-3 bg-dark" style="width:150px;">
+            <div class="media-body">
+                <h4 class="text-primary mb-3">John Doe</h4>
+                <p class="m-0">¡Me encanta este gimnasio! El personal es amable y las instalaciones están en excelente estado.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 py-4">
+        <h3 class="mb-4 font-weight-bold">3 Comentarios</h3>
+        <div class="media mb-4">
+            <img src="{% static 'assets/img/user.jpg' %}" alt="Image" class="mr-3 mt-1 rounded-circle" style="width:60px;">
+            <div class="media-body">
+                <h4>John Doe <small><i>01 Ene 2045 a las 12:00pm</i></small></h4>
+                <p>El gimnasio es genial. Los entrenadores son muy profesionales y siempre están dispuestos a ayudar.</p>
+            </div>
+        </div>
+        <div class="media mb-4">
+            <img src="{% static 'assets/img/user.jpg' %}" alt="Image" class="mr-3 mt-1 rounded-circle"
+                style="width:60px;">
+            <div class="media-body">
+                <h4>John Doe <small><i>01 Ene 2045 a las 12:00pm</i></small></h4>
+                <p>Estoy muy contento con los resultados que he obtenido en este gimnasio. ¡Lo recomiendo totalmente!</p>
+                <div class="media mt-4">
+                    <img src="{% static 'assets/img/user.jpg' %}" alt="Image" class="mr-3 mt-1 rounded-circle"
+                        style="width:60px;">
+                    <div class="media-body">
+                        <h4>John Doe <small><i>01 Ene 2045 a las 12:00pm</i></small></h4>
+                        <p>Este gimnasio me ha ayudado a alcanzar mis metas de acondicionamiento físico. ¡Gracias por todo!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog Detail End -->
+
+
+    <!-- Footer Start -->
+    <div class="footer container-fluid mt-5 py-5 px-sm-3 px-md-5 text-white">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-primary mb-4">Informacion</h4>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>Oroño 200, Rosario, ARG</p>
+                <p><i class="fa fa-envelope mr-2"></i>gimnasio.olimpo@gmail.com</p>
+                
+            </div>
+            
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-primary mb-4">Horarios</h4>
+                <h5 class="text-white">Lunes - Viernes</h5>
+                <p>8.00 AM - 8.00 PM</p>
+                <h5 class="text-white">Sábado - Domingo</h5>
+                <p>2.00 PM - 8.00 PM</p>
+            </div>
+        </div>
+        <div class="container border-top border-dark pt-5">
+            <p class="m-0 text-center text-white">
+                &copy; <a class="text-white font-weight-bold" href="#">Gym Olimpo</a>. Derechos reservados.
+            </p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="{%static 'assets/lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'assets/lib/waypoints/waypoints.min.js' %}"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="{%static 'assets/mail/jqBootstrapValidation.min.js' %}"></script>
+    <script src="{% static 'assets/mail/contact.js' %}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+
+</html>

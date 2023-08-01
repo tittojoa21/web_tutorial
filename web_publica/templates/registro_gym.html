@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro Gym</title>
+</head>
+<body>
+    {% if registrado_exitosamente %}
+        <div style="background-color: #f0f0f0; padding: 20px;">
+            <h1 style="color: #333;">Registro Exitoso</h1>
+            <p style="color: #666;">Tu registro ha sido exitoso. ¡Gracias por registrarte!</p>
+            <form action="{% url 'index' %}" method="GET">
+                <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer;">Volver a la página principal</button>
+            </form>
+        </div>
+    {% else %}
+        <div style="background-color: #f0f0f0; padding: 20px;">
+            <h1 style="color: #333;">Registro de Gimnasio</h1>
+            <form method="POST" action="{% url 'registro_gym' %}">
+                {% csrf_token %}
+                <label for="{{ form.nombre.id_for_label }}" style="color: #666;">Nombre</label>
+                <br>
+                {{ form.nombre }}
+                <br><br>
+                <label for="{{ form.email.id_for_label }}" style="color: #666;">Correo Electrónico</label>
+                <br>
+                {{ form.email }}
+                <br><br>
+                <label for="{{ form.password1.id_for_label }}" style="color: #666;">Contraseña</label>
+                <br>
+                {{ form.password1 }}
+                <br><br>
+                <label for="{{ form.password2.id_for_label }}" style="color: #666;">Confirmar Contraseña</label>
+                <br>
+                {{ form.password2 }}
+                <br><br>
+                <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer;">Registrarse</button>
+            </form>
+        </div>
+    {% endif %}
+</body>
+</html>

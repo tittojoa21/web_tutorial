@@ -1,0 +1,795 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gym Olimpo</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free Website Template" name="keywords">
+    <meta content="Free Website Template" name="description">
+
+    <!-- Favicon -->
+    <link href="{% static 'assets/img/favicon.ico' %}" rel="icon">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Flaticon Font -->
+    <link href="{%static 'assets/lib/flaticon/font/flaticon.css'%}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{%static 'assets/css/style.min.css'%}" rel="stylesheet">
+</head>
+
+<body class="bg-white">
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 nav-bar">
+        <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
+            <a href="" class="navbar-brand">
+                <h1 class="m-0 display-4 font-weight-bold text-uppercase text-white">Gimnasio Olimpo</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto p-4 bg-secondary">
+                    <a href="{% url 'home' %}" class="nav-item nav-link active">Inicio</a>
+                    <a href="{% url 'about' %}" class="nav-item nav-link">Sobre Nosotros</a>
+                    <a href="{% url 'feature' %}" class="nav-item nav-link">Caracteristicas</a>
+                    <a href="{% url 'clases' %}" class="nav-item nav-link">Clases</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Paginas</a>
+                        <div class="dropdown-menu text-capitalize">
+                            <a href="{% url 'blog' %}" class="dropdown-item">Grilla</a>
+                            <a href="{% url 'single' %}" class="dropdown-item">Detalles</a>
+                        </div>
+                    </div>
+                    <a href="{% url 'contact' %}" class="nav-item nav-link">Contactos</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+        <div id="blog-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="{% static 'assets/img/carousel-1.jpg' %}" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <h3 class="text-primary text-capitalize m-0">Gym & Fitness Center</h3>
+                        <h2 class="display-2 m-0 mt-2 mt-md-4 text-white font-weight-bold text-capitalize">el mejor gimnasio de la ciudad</h2>
+                        <a href="{% url 'registro_gym' %}" class="btn btn-lg btn-outline-light mt-3 mt-md-5 py-md-3 px-md-5">unete ahora!</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="{% static 'assets/img/carousel-2.jpg' %}" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <h3 class="text-primary text-capitalize m-0">Gym & Fitness Center</h3>
+                        <h2 class="display-2 m-0 mt-2 mt-md-4 text-white font-weight-bold text-capitalize">Obten el cuerpo de tus sueños</h2>
+                        <a href="{% url 'registro_gym' %}" class="btn btn-lg btn-outline-light mt-3 mt-md-5 py-md-3 px-md-5">Unete Ahora!</a>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#blog-carousel" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#blog-carousel" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- Gym Class Start -->
+    <div class="container gym-class mb-5">
+        <div class="row px-3">
+            <div class="col-md-6 p-0">
+                <div class="gym-class-box d-flex flex-column align-items-end justify-content-center bg-primary text-right text-white py-5 px-5">
+                    <i class="flaticon-six-pack"></i>
+                    <h3 class="display-4 mb-3 text-white font-weight-bold">Tonifica tu cuerpo</h3>
+                    <p>
+                        Aprende a darle forma a tu cuerpo con nuestras rutinas y nustra ayuda por parte de los entrenadores
+                        del gimnasio Olimpo. Conviertete en un verdadero dios griego.
+                    </p>
+                    <a href="" class="btn btn-lg btn-outline-light mt-4 px-4">Unirse</a>
+                </div>
+            </div>
+            <div class="col-md-6 p-0">
+                <div class="gym-class-box d-flex flex-column align-items-start justify-content-center bg-secondary text-left text-white py-5 px-5">
+                    <i class="flaticon-bodybuilding"></i>
+                    <h3 class="display-4 mb-3 text-white font-weight-bold">Gana musculos</h3>
+                    <p>
+                        Gana masa muscular para mostrar ese cuerpo digno de dioses y se la envidia de todas las personas, nuestros
+                        entrenados van a convertirte en todo un minotauro.
+                    </p>
+                    <a href="" class="btn btn-lg btn-outline-light mt-4 px-4">Unirse</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Gym Class End -->
+
+
+    <!-- About Start -->
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <img class="img-fluid mb-4 mb-lg-0" src="{% static 'assets/img/about.jpg' %}" alt="Image">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="display-4 font-weight-bold mb-4">10 años de experiencia</h2>
+                <p>Los mejores entrenadores a tu disposición</p>
+                <div class="row py-2">
+                    <div class="col-sm-6">
+                        <i class="flaticon-barbell display-2 text-primary"></i>
+                        <h4 class="font-weight-bold">Certificado Gym Olimpo</h4>
+                        <p>Certificamos tener los mejores entrenadores para el mejor gym</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <i class="flaticon-medal display-2 text-primary"></i>
+                        <h4 class="font-weight-bold">Ganadores del año</h4>
+                        <p>Contamos con entrenadores ganadores de premios internacionales</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Features Start -->
+    <div class="container-fluid my-5">
+        <div class="row">
+            <div class="col-lg-4 p-0">
+                <div class="d-flex align-items-center bg-secondary text-white px-5" style="min-height: 300px;">
+                    <i class="flaticon-training display-3 text-primary mr-3"></i>
+                    <div class="">
+                        <h2 class="text-white mb-3">Progreso</h2>
+                        <p>El progreso es la clave para alcanzar tus objetivos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 p-0">
+                <div class="d-flex align-items-center bg-primary text-white px-5" style="min-height: 300px;">
+                    <i class="flaticon-weightlifting display-3 text-secondary mr-3"></i>
+                    <div class="">
+                        <h2 class="text-white mb-3">Trabajo</h2>
+                        <p>Trabaja duro para alcanzar la cima.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 p-0">
+                <div class="d-flex align-items-center bg-secondary text-white px-5" style="min-height: 300px;">
+                    <i class="flaticon-treadmill display-3 text-primary mr-3"></i>
+                    <div class="">
+                        <h2 class="text-white mb-3">Nutricion</h2>
+                        <p>Alimentate bien, la buena alimentacion es lo mas importante para 
+                            lograr tu cuerpo soñado.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features End -->
+
+
+    <!-- GYM Feature Start -->
+    <div class="container feature pt-5">
+        <div class="d-flex flex-column text-center mb-5">
+            <h4 class="text-primary font-weight-bold">Por que escogernos?</h4>
+            <h4 class="display-4 font-weight-bold">Beneficios del gym</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <img class="img-fluid mb-3 mb-sm-0" src="{% static 'assets/img/feature-1.jpg' %}" alt="Image">
+                        <i class="flaticon-barbell"></i>
+                    </div>
+                    <div class="col-sm-7">
+                        <h4 class="font-weight-bold">videos instructivos</h4>
+                        <p>Vas a encontrar videos explicando el funcionamiento de maquinas y
+                            ejercicios en todo momento.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <img class="img-fluid mb-3 mb-sm-0" src="{% static 'assets/img/feature-2.jpg' %}" alt="Image">
+                        <i class="flaticon-training"></i>
+                    </div>
+                    <div class="col-sm-7">
+                        <h4 class="font-weight-bold">Calendario</h4>
+                        <p>Calendario de entrenamiento</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <img class="img-fluid mb-3 mb-sm-0" src="{% static 'assets/img/feature-3.jpg' %}" alt="Image">
+                        <i class="flaticon-trends"></i>
+                    </div>
+                    <div class="col-sm-7">
+                        <h4 class="font-weight-bold">Free WiFi</h4>
+                        <p>vas a contar con conexion wifi en todo momento de tu entrenamiento</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <img class="img-fluid mb-3 mb-sm-0" src="{% static 'assets/img/feature-4.jpg' %}" alt="Image">
+                        <i class="flaticon-support"></i>
+                    </div>
+                    <div class="col-sm-7">
+                        <h4 class="font-weight-bold">Soporte</h4>
+                        <p>Contamos con soporte en todo momento de parte de nuestros entrenadores</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- GYM Feature End -->
+
+    <!-- Class Timetable Start -->
+    <div class="container gym-feature py-5">
+        <div class="d-flex flex-column text-center mb-5">
+            <h4 class="text-primary font-weight-bold">Horarios</h4>
+            <h4 class="display-4 font-weight-bold">Horarios de clases y Trabajo</h4>
+        </div>
+        <div class="tab-class">
+            <ul class="nav nav-pills justify-content-center mb-4">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="pill" href="#class-all">Todas las clases</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#class-cardio">Cardio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#class-crossfit">Crossfit</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#class-powerlifting">Powerlifting</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div id="class-all" class="container tab-pane p-0 active">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-lg m-0">
+                            <thead class="bg-secondary text-white text-center">
+                                <tr>
+                                    <th>Horarios</th>
+                                    <th>Lunes</th>
+                                    <th>Martes</th>
+                                    <th>Miércoles</th>
+                                    <th>Jueves</th>
+                                    <th>Viernes</th>
+                                    <th>Sábado</th>
+                                    <th>Domingo</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">6.00am - 8.00am</th>
+                                    <td><h5>Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td><h5>Crossfit</h5>Adam Phillips</td>
+                                    <td></td>
+                                    <td><h5>Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                    <td><h5>Cardio</h5>John Deo</td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">10.00am - 12.00am</th>
+                                    <td></td>
+                                    <td><h5>Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                    <td><h5>Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td><h5>Crossfit</h5>Adam Phillips</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">5.00pm - 7.00pm</th>
+                                    <td><h5>Crossfit</h5>Adam Phillips</td>
+                                    <td></td>
+                                    <td><h5>Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                    <td><h5>Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td><h5>Crossfit</h5>Adam Phillips</td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">7.00pm - 9.00pm</th>
+                                    <td></td>
+                                    <td><h5>Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td><h5>Crossfit</h5>Adam Phillips</td>
+                                    <td></td>
+                                    <td><h5>Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="class-cardio" class="container tab-pane fade p-0">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-lg m-0">
+                            <thead class="bg-secondary text-white text-center">
+                                <tr>
+                                    <th>Horarios</th>
+                                    <th>Lunes</th>
+                                    <th>Martes</th>
+                                    <th>Miércoles</th>
+                                    <th>Jueves</th>
+                                    <th>Viernes</th>
+                                    <th>Sábado</th>
+                                    <th>Domingo</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">6.00am - 8.00am</th>
+                                    <td class="bg-primary text-white"><h5 class="text-white">Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td><h5>Crossfit</h5>Adam Phillips</td>
+                                    <td></td>
+                                    <td><h5>Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                    <td class="bg-primary text-white"><h5 class="text-white">Cardio</h5>John Deo</td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">10.00am - 12.00am</th>
+                                    <td></td>
+                                    <td><h5>Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                    <td class="bg-primary text-white"><h5 class="text-white">Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td><h5>Crossfit</h5>Adam Phillips</td>
+                                    <td></td> 
+                                </tr>
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">5.00pm - 7.00pm</th>
+                                    <td><h5>Crossfit</h5>Adam Phillips</td>
+                                    <td></td>
+                                    <td><h5>Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                    <td class="bg-primary text-white"><h5 class="text-white">Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td><h5>Crossfit</h5>Adam Phillips</td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">7.00pm - 9.00pm</th>
+                                    <td></td>
+                                    <td class="bg-primary text-white"><h5 class="text-white">Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td><h5>Crossfit</h5>Adam Phillips</td>
+                                    <td></td>
+                                    <td><h5>Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="class-crossfit" class="container tab-pane fade p-0">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-lg m-0">
+                            <thead class="bg-secondary text-white text-center">
+                                <tr>
+                                    <th>Horarios</th>
+                                    <th>Lunes</th>
+                                    <th>Martes</th>
+                                    <th>Miércoles</th>
+                                    <th>Jueves</th>
+                                    <th>Viernes</th>
+                                    <th>Sábado</th>
+                                    <th>Domingo</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">6.00am - 8.00am</th>
+                                    <td><h5>Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td class="bg-primary text-white"><h5 class="text-white">Crossfit</h5>Adam Phillips</td>
+                                    <td></td>
+                                    <td><h5>Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                    <td><h5>Cardio</h5>John Deo</td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">10.00am - 12.00am</th>
+                                    <td></td>
+                                    <td><h5>Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                    <td><h5>Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td class="bg-primary text-white"><h5 class="text-white">Crossfit</h5>Adam Phillips</td>
+                                    <td></td> 
+                                </tr>
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">5.00pm - 7.00pm</th>
+                                    <td class="bg-primary text-white"><h5 class="text-white">Crossfit</h5>Adam Phillips</td>
+                                    <td></td>
+                                    <td><h5>Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                    <td><h5>Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td class="bg-primary text-white"><h5 class="text-white">Crossfit</h5>Adam Phillips</td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">7.00pm - 9.00pm</th>
+                                    <td></td>
+                                    <td><h5>Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td class="bg-primary text-white"><h5 class="text-white">Crossfit</h5>Adam Phillips</td>
+                                    <td></td>
+                                    <td><h5>Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="class-powerlifting" class="container tab-pane fade p-0">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-lg m-0">
+                            <thead class="bg-secondary text-white text-center">
+                                <tr>
+                                    <th>Horarios</th>
+                                    <th>Lunes</th>
+                                    <th>Martes</th>
+                                    <th>Miércoles</th>
+                                    <th>Jueves</th>
+                                    <th>Viernes</th>
+                                    <th>Sábado</th>
+                                    <th>Domingo</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">6.00am - 8.00am</th>
+                                    <td><h5>Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td><h5>Crossfit</h5>Adam Phillips</td>
+                                    <td></td>
+                                    <td class="bg-primary text-white"><h5 class="text-white">Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                    <td><h5>Cardio</h5>John Deo</td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">10.00am - 12.00am</th>
+                                    <td></td>
+                                    <td class="bg-primary text-white"><h5 class="text-white">Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                    <td><h5>Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td><h5>Crossfit</h5>Adam Phillips</td>
+                                    <td></td> 
+                                </tr>
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">5.00pm - 7.00pm</th>
+                                    <td><h5>Crossfit</h5>Adam Phillips</td>
+                                    <td></td>
+                                    <td class="bg-primary text-white"><h5 class="text-white">Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                    <td><h5>Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td><h5>Crossfit</h5>Adam Phillips</td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">7.00pm - 9.00pm</th>
+                                    <td></td>
+                                    <td><h5>Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td><h5>Crossfit</h5>Adam Phillips</td>
+                                    <td></td>
+                                    <td class="bg-primary text-white"><h5 class="text-white">Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Class Timetable End -->
+
+
+<!-- BMI Calculation Start -->
+<div class="container-fluid position-relative bmi mt-5" style="margin-bottom: 90px;">
+    <div class="container">
+        <div class="row px-3 align-items-center">
+            <div class="col-md-6">
+                <div class="pr-md-3 d-none d-md-block">
+                    <h4 class="text-primary">Indice de Masa Corporal</h4>
+                    <h4 class="display-4 text-white font-weight-bold mb-4">Que es IMC?</h4>
+                    <p class="m-0 text-white">El Indice de Masa Corporal (IMC) es un calculo que se utiliza para determinar la tasa de masa corporal de un individuo mediante su peso y estatura.</p>
+                </div>
+            </div>
+            <div class="col-md-6 bg-secondary py-5">
+                <div class="py-5 px-3">
+                    <h1 class="mb-4 text-white">Calcula Tu IMC</h1>
+                    <form id="bmiForm">
+                        <div class="form-row">
+                            <div class="col form-group">
+                                <input type="text" id="weightInput" class="form-control form-control-lg bg-dark text-white" placeholder="Peso (KG)">
+                            </div>
+                            <div class="col form-group">
+                                <input type="text" id="heightInput" class="form-control form-control-lg bg-dark text-white" placeholder="Altura (CM)">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col form-group">
+                                <input type="text" id="ageInput" class="form-control form-control-lg bg-dark text-white" placeholder="Edad">
+                            </div>
+                            <div class="col form-group">
+                                <select id="genderSelect" class="custom-select custom-select-lg bg-dark text-muted">
+                                    <option>Genero</option>
+                                    <option>Hombre</option>
+                                    <option>Mujer</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <input type="button" id="calculateBtn" class="btn btn-lg btn-block btn-dark border-light" value="Calcular">
+                            </div>
+                        </div>
+                    </form>
+                    <div id="resultContainer" class="mt-4" style="display: none;">
+                        <h4 class="text-white">Tu IMC es: <span id="bmiResult"></span></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- BMI Calculation End -->
+
+<script>
+    // Function to calculate BMI
+    function calculateBMI() {
+        // Get input values
+        var weight = parseFloat(document.getElementById('weightInput').value);
+        var height = parseFloat(document.getElementById('heightInput').value);
+
+        // Calculate BMI
+        var bmi = weight / Math.pow(height / 100, 2);
+
+        // Display result
+        document.getElementById('bmiResult').textContent = bmi.toFixed(2);
+        document.getElementById('resultContainer').style.display = 'block';
+    }
+
+    // Attach event listener to calculate button
+    document.getElementById('calculateBtn').addEventListener('click', calculateBMI);
+</script>
+
+
+
+    <!-- Team Start -->
+    <div class="container pt-5 team">
+        <div class="d-flex flex-column text-center mb-5">
+            <h4 class="text-primary font-weight-bold">Algunos entrenadores</h4>
+            <h4 class="display-4 font-weight-bold">Conoce a nuestros entrenadores</h4>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <div class="card border-0 bg-secondary text-center text-white">
+                    <img class="card-img-top" src="{% static 'assets/img/team-1.jpg' %}" alt="">
+                    <div class="card-social d-flex align-items-center justify-content-center">
+                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="https://www.instagram.com/mazzatomas/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="card-body bg-secondary">
+                        <h4 class="card-title text-primary">Tomas Mazza</h4>
+                        <p class="card-text">Entrenador de Olimpo</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <div class="card border-0 bg-secondary text-center text-white">
+                    <img class="card-img-top" src="{% static 'assets/img/team-2.jpg' %}" alt="">
+                    <div class="card-social d-flex align-items-center justify-content-center">
+                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="https://www.instagram.com/andonifitness/"><i class="fab fa-instagram"></i></a>
+
+                    </div>
+                    <div class="card-body bg-secondary">
+                        <h4 class="card-title text-primary">Andoni</h4>
+                        <p class="card-text">Entrenador de Olimpo</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <div class="card border-0 bg-secondary text-center text-white">
+                    <img class="card-img-top" src="{% static 'assets/img/team-3.jpg' %}" alt="">
+                    <div class="card-social d-flex align-items-center justify-content-center">
+                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="https://www.instagram.com/joanpradells/"><i class="fab fa-instagram"></i></a>
+
+                    </div>
+                    <div class="card-body bg-secondary">
+                        <h4 class="card-title text-primary">joan Pradells</h4>
+                        <p class="card-text">Culturista</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <div class="card border-0 bg-secondary text-center text-white">
+                    <img class="card-img-top" src="{% static 'assets/img/team-4.jpg' %}" alt="">
+                    <div class="card-social d-flex align-items-center justify-content-center">
+                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="https://www.instagram.com/cbum/"><i class="fab fa-instagram"></i></a>
+
+                    </div>
+                    <div class="card-body bg-secondary">
+                        <h4 class="card-title text-primary">Chris Bumstead</h4>
+                        <p class="card-text">Culturista Profecional</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid position-relative testimonial my-5">
+        <div class="container">
+            <div class="row px-3 align-items-center">
+                <div class="col-md-6 bg-secondary">
+                    <div class="d-flex align-items-center px-3" style="min-height: 450px;">
+                        <div id="carouselId" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselId" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselId" data-slide-to="1"></li>
+                                <li data-target="#carouselId" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active">
+                                    <div class="d-flex align-items-center mb-4 text-white">
+                                        <img width="80" height="80" class="rounded-circle bg-dark p-2" src="{% static 'assets/img/testimonial-1.jpg' %}" alt="Image">
+                                        <div class="pl-4">
+                                            <h4 class="text-primary">martin sanchez</h4>
+                                            <p class="m-0">Abogado</p>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-text position-relative border bg-dark text-white mb-5 p-4">
+                                        Desde que voy al gimnasio olimpo pude resolver mi problema de sedentarismo y me siento mucho mejor
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="d-flex align-items-center mb-4 text-white">
+                                        <img width="80" height="80" class="rounded-circle bg-dark p-2" src="{% static 'assets/img/testimonial-2.jpg' %}" alt="Image">
+                                        <div class="pl-4">
+                                            <h4 class="text-primary">gonzalo rodriguez</h4>
+                                            <p class="m-0">ingeniero</p>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-text position-relative border bg-dark text-white mb-5 p-4">
+                                        El gimnasio me encanta, muy limpo y sobre todo buena atencion por parte de todos los miembros
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="d-flex align-items-center mb-4 text-white">
+                                        <img width="80" height="80" class="rounded-circle bg-dark p-2" src="{% static 'assets/img/testimonial-3.jpg' %}" alt="Image">
+                                        <div class="pl-4">
+                                            <h4 class="text-primary">raul pereyra</h4>
+                                            <p class="m-0">Programador</p>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-text position-relative border bg-dark text-white mb-5 p-4">
+                                        Me siento muy feliz, muy satisfecho con mi entrenamiento y el progreso que voy consiguiendo
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="pl-md-3 d-none d-md-block">
+                        <h4 class="text-primary">Testimonios</h4>
+                        <h4 class="display-4 mb-4 text-white font-weight-bold">Que es lo que dicen los clientes?</h4>
+                        <p class="m-0 text-white">Aqui podras ver lo que opina la gente sobre el gimnasio olimpo todos los dias</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Blog Start -->
+    <div class="container pt-5">
+        <div class="d-flex flex-column text-center mb-5">
+            <h4 class="text-primary font-weight-bold">Nuestro Blog</h4>
+            <h4 class="display-4 font-weight-bold">Consejos para ti</h4>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 mb-5 blog-item">
+                <img class="img-fluid mb-4" src="{% static 'assets/img/blog-1.jpg' %}" alt="Image">
+                <div class="d-flex align-items-center mb-4">
+                    <div class="d-flex flex-column align-items-center justify-content-center rounded-circle bg-primary text-white" style="width: 80px; height: 80px;">
+                        <small>01</small>
+                        <strong class="text-uppercase m-0 text-white">enero</strong>
+                        <small>2023</small>
+                    </div>
+                    <div class="pl-3">
+                        <h3 class="font-weight-bold">Consejos para una rutina de entrenamiento efectiva en el gimnasio</h3>
+                        <div class="d-flex">
+                            <small class="mr-2 text-muted"><i class="fa fa-user"></i> Cliete</small>
+                            <small class="mr-2 text-muted"><i class="fa fa-folder"></i>Fitness</Obj></small>
+                        </div>
+                    </div>
+                </div>
+                <p>Estás buscando alcanzar tus metas de fitness y sacar el máximo provecho de tus entrenamientos en el gimnasio
+                    es esencial tener una rutina efectiva. En este artículo, te proporcionamos consejos y recomendaciones para planificar una rutina de entrenamiento
+                     que se adapte a tus objetivos personales. Desde la importancia de variar los ejercicios hasta la necesidad de incluir ejercicios de fuerza y cardio
+                      descubrirás cómo obtener resultados óptimos de tus sesiones en el gimnasio. No importa si eres principiante o experimentado, con esta guía, estarás
+                       en el camino correcto hacia una forma física mejorada y un estilo de vida saludable.</p>
+            </div>
+            <div class="col-lg-6 mb-5 blog-item">
+                <img class="img-fluid mb-4" src="{% static 'assets/img/blog-2.jpg' %}" alt="Image">
+                <div class="d-flex align-items-center mb-4">
+                    <div class="d-flex flex-column align-items-center justify-content-center rounded-circle bg-primary text-white" style="width: 80px; height: 80px;">
+                        <small>05</small>
+                        <strong class="text-uppercase m-0 text-white">Mayo</strong>
+                        <small>2023</small>
+                    </div>
+                    <div class="pl-3">
+                        <h3 class="font-weight-bold">Alimentación saludable para optimizar tus entrenamientos en el gimnasio</h3>
+                        <div class="d-flex">
+                            <small class="mr-2 text-muted"><i class="fa fa-user"></i> Entrenador</small>
+                            <small class="mr-2 text-muted"><i class="fa fa-folder"></i> Nutricion</small>
+                        </div>
+                    </div>
+                </div>
+                <p> Cuando se trata de obtener resultados óptimos en el gimnasio, la nutrición adecuada juega un papel fundamental.
+                     En este artículo, te presentamos una guía completa sobre cómo mejorar tu alimentación para potenciar
+                      tus entrenamientos y alcanzar tus objetivos de fitness. Desde la importancia de consumir suficiente proteína para 
+                      la recuperación muscular hasta la elección de carbohidratos complejos para obtener energía duradera, te brindamos consejos 
+                      prácticos para una dieta equilibrada y saludable. Además, exploraremos la relevancia de la hidratación adecuada y los suplementos 
+                      nutricionales que pueden apoyar tus esfuerzos en el gimnasio. ¡Optimiza tu alimentación y obtén
+                       el máximo rendimiento en cada sesión de entrenamiento!</p>
+            </div>
+        </div>
+    </div>
+    <!-- Blog End -->
+    
+
+
+    <div class="footer container-fluid mt-5 py-5 px-sm-3 px-md-5 text-white"></div>
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'assets/lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'assets/lib/waypoints/waypoints.min.js' %}"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="{% static 'assets/mail/jqBootstrapValidation.min.js' %}"></script>
+    <script src="{% static 'assets/mail/contact.js' %}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+
+</html>
