@@ -8,7 +8,7 @@ class MyTestCase(TestCase):
         self.assertContains(response, 'Tu registro ha sido exitoso. ¡Gracias por registrarte!')
 
     def test_formulario_registro(self):
-        response = self.client.get('registro_gym_view')  # Reemplaza '/registro' con la URL real de tu vista de registro
+        response = self.client.get('registro_gym_view')  
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'Registro de Gimnasio')
         self.assertContains(response, '<form')
@@ -25,4 +25,4 @@ class MyTestCase(TestCase):
         self.assertContains(response, 'color: #333;')
         self.assertContains(response, 'background-color: #4CAF50;')
         self.assertContains(response, 'color: white;')
-        # Agrega más aserciones aquí para verificar los estilos CSS aplicados correctamente
+    
