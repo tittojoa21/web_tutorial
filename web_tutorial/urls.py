@@ -23,4 +23,3 @@ urlpatterns = [
     path('', include('web_publica.urls')),
     path('accounts/', include('accounts.urls')),
 ]
-# esto es una prueba
