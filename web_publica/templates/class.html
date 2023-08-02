@@ -365,7 +365,6 @@
     
 
 <!-- BMI Calculation Start -->
-<!-- BMI Calculation Start -->
 <div class="container-fluid position-relative bmi mt-5" style="margin-bottom: 90px;">
     <div class="container">
         <div class="row px-3 align-items-center">
@@ -420,11 +419,11 @@
     // Function to calculate BMI
     function calculateBMI() {
         // Get input values
-        var weight = parseFloat(document.getElementById('weightInput').value);
-        var height = parseFloat(document.getElementById('heightInput').value);
+        var Peso = parseFloat(document.getElementById('PesoInput').value);
+        var Altura = parseFloat(document.getElementById('AlturaInput').value);
 
         // Calculate BMI
-        var bmi = weight / Math.pow(height / 100, 2);
+        var bmi = Peso / Math.pow(Altura / 100, 2);
 
         // Display result
         document.getElementById('bmiResult').textContent = bmi.toFixed(2);

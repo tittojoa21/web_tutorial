@@ -44,7 +44,7 @@ def registro_gym_view(request):
 
 
 def registro_exitoso(request):
-    mensaje = "Registro exitoso"  # Puedes pasar datos adicionales a la plantilla
+    mensaje = "Registro exitoso"  
     return render(request, 'registro_exitoso.html', {'mensaje': mensaje})
 
 

@@ -20,7 +20,6 @@ class GymMember(AbstractUser):
         help_text=_('Permissions for the user'),
         related_name='gym_members'
     )
-    # Agrega otros campos según tus necesidades
 
     def __str__(self):
         return self.nombre
